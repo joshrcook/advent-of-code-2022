@@ -16,9 +16,11 @@ const scoreRound = (them: number, us: number): number => {
     if (us === 0) {
         return them + 3;
     }
+    // lose
     if (us === -1) {
         return them - 1 === 0 ? 3 : them - 1;
     }
+    // win
     return ( them + 1 === 4 ? 1 : them + 1 ) + 6;
 };
 const sum = (prev: number, curr: number): number => prev + curr;
